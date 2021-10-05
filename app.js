@@ -4,6 +4,7 @@ const path = require("path");
 
 // MIDDLEWARES
 app.use(express.static("public"));
+// Selam
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public/index.html"));
