@@ -1,0 +1,32 @@
+{
+  "name": "05-clean-blog",
+  "version": "1.0.0",
+  "description": "express.js app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enes-ets34/clean-blog.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "api",
+    "application"
+  ],
+  "author": "Enes Taha Sarı",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enes-ets34/clean-blog/issues"
+  },
+  "homepage": "https://github.com/Enes-ets34/clean-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
