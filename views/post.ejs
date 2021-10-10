@@ -1,51 +1,60 @@
 <%-include('./components/_header.ejs') -%>
 
-<body>
+  <body>
 
-  <!-- Navigation -->
-  <%-include('./components/_navbar.ejs') -%>
+    <!-- Navigation -->
+    <%-include('./components/_navbar.ejs') -%>
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('/img/post-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1><%= post.title%></h1>
-            <h2 class="subheading"><%= post.description%></h2>
-            <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on <%= post.date%></span>
+      <!-- Page Header -->
+      <header class="masthead" style="background-image: url('/img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="post-heading">
+                <h1>
+                  <%= post.title%>
+                </h1>
+                <h2 class="subheading">
+                  <%= post.description%>
+                </h2>
+                <span class="meta">Posted by
+                  <a href="#">Start Bootstrap</a>
+                  on <%= post.date%></span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
+      </header>
 
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <%= post.detail%>
+      <!-- Post Content -->
+      <article>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+            
+              <%= post.detail%>
+              <div class="d-flex mt-4 justify-content-start align-items center">
+                <a href="/edit/<%= post._id%>" class="btn btn-primary">Update</a>
+                <a href="/posts/<%= post._id%>?_method=DELETE" onclick="return confirm('are you sure?')" class="btn btn-danger mx-2">Delete</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </article>
+      </article>
 
-  <hr>
+      <hr>
 
-  <!-- Footer -->
-  <%-include('./components/_footer.ejs') -%>
+      <!-- Footer -->
+      <%-include('./components/_footer.ejs') -%>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="/js/clean-blog.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="/js/clean-blog.min.js"></script>
 
-</body>
+  </body>
 
-</html>
+  </html>
